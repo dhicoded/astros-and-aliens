@@ -1,0 +1,23 @@
+class Ladder{
+    constructor(startX,startY,endX,endY){
+            this.start={
+                x:startX,
+                y:startY,
+            }
+            this.end={
+                x:endX,
+                y:endY,
+            }
+            this.image=null;
+        }
+    display(){
+            push();
+            strokeWeight(4);
+            stroke('green');
+            //line(grid.snlGrid[this.start.x][this.start.y].boxSprite.x,grid.snlGrid[this.start.x][this.start.y].boxSprite.y,grid.snlGrid[this.end.x][this.end.y].boxSprite.x,grid.snlGrid[this.end.x][this.end.y].boxSprite.y);
+            imageMode(CENTER);
+            image(this.image,grid.snlGrid[this.start.x][this.start.y].boxSprite.x,grid.snlGrid[this.start.x][this.start.y].boxSprite.y,50,50);
+            image(this.image,grid.snlGrid[this.end.x][this.end.y].boxSprite.x,grid.snlGrid[this.end.x][this.end.y].boxSprite.y,50,50);
+            pop();
+    }
+}
